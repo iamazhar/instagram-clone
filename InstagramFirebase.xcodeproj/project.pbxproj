@@ -15,6 +15,8 @@
 		FFC46034216B5D730052222C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC46033216B5D730052222C /* Assets.xcassets */; };
 		FFC46037216B5D730052222C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC46035216B5D730052222C /* LaunchScreen.storyboard */; };
 		FFC46040216B6C0D0052222C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4603F216B6C0D0052222C /* Extensions.swift */; };
+		FFFA5D8D216CD62100E6B740 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA5D8C216CD62100E6B740 /* MainTabBarController.swift */; };
+		FFFA5D91216CD72D00E6B740 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFA5D90216CD72D00E6B740 /* UserProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +24,6 @@
 		E1874F45CED80035EDD1B0F8 /* Pods-InstagramFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		F84DCA08BFF33AC65362A170 /* Pods-InstagramFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		FF16FD42216B87E700448B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FF16FD44216B971400448B5A /* InstagramFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramFirebase.entitlements; sourceTree = "<group>"; };
 		FFC46029216B5D720052222C /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC4602C216B5D720052222C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC4602E216B5D720052222C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +32,8 @@
 		FFC46036216B5D730052222C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFC46038216B5D730052222C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFC4603F216B6C0D0052222C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FFFA5D8C216CD62100E6B740 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FFFA5D90216CD72D00E6B740 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,10 @@
 		FFC4602B216B5D720052222C /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				FF16FD44216B971400448B5A /* InstagramFirebase.entitlements */,
 				FFC4603E216B6BF50052222C /* Utils */,
 				FFC4602C216B5D720052222C /* AppDelegate.swift */,
+				FFFA5D8C216CD62100E6B740 /* MainTabBarController.swift */,
+				FFFA5D90216CD72D00E6B740 /* UserProfileController.swift */,
 				FFC4602E216B5D720052222C /* ViewController.swift */,
 				FFC46030216B5D720052222C /* Main.storyboard */,
 				FFC46033216B5D730052222C /* Assets.xcassets */,
@@ -141,10 +145,10 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -249,6 +253,8 @@
 			files = (
 				FFC4602F216B5D720052222C /* ViewController.swift in Sources */,
 				FFC46040216B6C0D0052222C /* Extensions.swift in Sources */,
+				FFFA5D8D216CD62100E6B740 /* MainTabBarController.swift in Sources */,
+				FFFA5D91216CD72D00E6B740 /* UserProfileController.swift in Sources */,
 				FFC4602D216B5D720052222C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +402,6 @@
 			baseConfigurationReference = F84DCA08BFF33AC65362A170 /* Pods-InstagramFirebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = InstagramFirebase/InstagramFirebase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD7HUSH4T7;
 				INFOPLIST_FILE = InstagramFirebase/Info.plist;
@@ -416,7 +421,6 @@
 			baseConfigurationReference = E1874F45CED80035EDD1B0F8 /* Pods-InstagramFirebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = InstagramFirebase/InstagramFirebase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD7HUSH4T7;
 				INFOPLIST_FILE = InstagramFirebase/Info.plist;
