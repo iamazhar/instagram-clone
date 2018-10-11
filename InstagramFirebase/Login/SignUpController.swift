@@ -145,7 +145,12 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIImag
                             print("Failed to save user info into the db:", err)
                         }
                         
+                        guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+                        mainTabBarController.setupViewControllers()
+                        self.dismiss(animated: true, completion: nil)
+                        
                         print("Successfully saved user info to DB")
+                        
                     })
                 })
             })
