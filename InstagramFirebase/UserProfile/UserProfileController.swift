@@ -26,10 +26,29 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         setupLogOutButton()
         
-        fetchPosts()
+//        fetchPosts()
+        fetchOrderedPosts()
     }
     
     var posts = [Post]()
+    
+    fileprivate func fetchOrderedPosts() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let ref = Database.database().reference().child("posts").child(uid)
+        
+        ref.queryOrdered(byChild: "creationDate").observe(.childAdded, with: { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let post = Post(dictionary: dictionary)
+            self.posts.append(post)
+            
+            self.collectionView.reloadData()
+            
+        }) { (err) in
+            print("Failed to fetch ordered posts:", err.localizedDescription)
+        }
+    }
+    
     fileprivate func fetchPosts() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -37,9 +56,8 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
+            
             dictionaries.forEach({ (key, value) in
-//                print("Key \(key), Value: \(value)")
-                
                 guard let dictionary = value as? [String: Any] else { return }
         
                 let post = Post(dictionary: dictionary)
