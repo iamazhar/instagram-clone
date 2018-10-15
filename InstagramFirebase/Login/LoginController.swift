@@ -132,7 +132,7 @@ class LoginController:  UIViewController {
                             right: view.rightAnchor,
                             paddingTop: 0,
                             paddingLeft: 0,
-                            paddingBottom: -20,
+                            paddingBottom: 20,
                             paddingRight: 0,
                             width: 0,
                             height: 50)
