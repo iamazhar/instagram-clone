@@ -40,7 +40,7 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         ref.queryOrdered(byChild: "creationDate").observe(.childAdded, with: { (snapshot) in
             guard let dictionary = snapshot.value as? [String: Any] else { return }
             
-            let dummyUser = User(dictionary: ["username" : "azhar"])
+            let dummyUser = User(uid: uid, dictionary: ["username" : "azhar"])
             
             let post = Post(user: dummyUser, dictionary: dictionary)
             self.posts.insert(post, at: 0)
@@ -139,17 +139,10 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     fileprivate func fetchUser(){
         guard let uid = Auth.auth().currentUser?.uid else{return}
         
-        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value ?? "")
-            
-            guard let dictionary = snapshot.value as? [String: Any] else{return}
-            self.user = User(dictionary: dictionary)
-            
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.user = user
             self.navigationItem.title = self.user?.username
             self.collectionView.reloadData()
-            
-        }) { (err) in
-            print("Failed to fetch user:", err)
         }
     }
 }
