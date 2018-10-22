@@ -26,6 +26,8 @@
 		FF603BD42170B11F00DA3D66 /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */; };
 		FFB96702217DBD62005C94E4 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96701217DBD62005C94E4 /* CameraController.swift */; };
 		FFB96704217DE3B1005C94E4 /* PreviewPhotoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96703217DE3B1005C94E4 /* PreviewPhotoContainerView.swift */; };
+		FFB96706217DF7B1005C94E4 /* CustomAnimationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96705217DF7B1005C94E4 /* CustomAnimationPresenter.swift */; };
+		FFB96708217DFB9A005C94E4 /* CustomAnimationDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96707217DFB9A005C94E4 /* CustomAnimationDismisser.swift */; };
 		FFC4602D216B5D720052222C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4602C216B5D720052222C /* AppDelegate.swift */; };
 		FFC4602F216B5D720052222C /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4602E216B5D720052222C /* SignUpController.swift */; };
 		FFC46032216B5D720052222C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC46030216B5D720052222C /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
 		FFB96701217DBD62005C94E4 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		FFB96703217DE3B1005C94E4 /* PreviewPhotoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPhotoContainerView.swift; sourceTree = "<group>"; };
+		FFB96705217DF7B1005C94E4 /* CustomAnimationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationPresenter.swift; sourceTree = "<group>"; };
+		FFB96707217DFB9A005C94E4 /* CustomAnimationDismisser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationDismisser.swift; sourceTree = "<group>"; };
 		FFC46029216B5D720052222C /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC4602C216B5D720052222C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC4602E216B5D720052222C /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			children = (
 				FFB96701217DBD62005C94E4 /* CameraController.swift */,
 				FFB96703217DE3B1005C94E4 /* PreviewPhotoContainerView.swift */,
+				FFB96705217DF7B1005C94E4 /* CustomAnimationPresenter.swift */,
+				FFB96707217DFB9A005C94E4 /* CustomAnimationDismisser.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				FFC4602F216B5D720052222C /* SignUpController.swift in Sources */,
 				FF04AA68216FC85500E00497 /* PhotoSelectorCell.swift in Sources */,
 				FF13A93E2174949D0057F113 /* CustomImageView.swift in Sources */,
+				FFB96706217DF7B1005C94E4 /* CustomAnimationPresenter.swift in Sources */,
 				FF13A93A217488F10057F113 /* Post.swift in Sources */,
 				FF1204F12177505E00A593B4 /* UserSearchController.swift in Sources */,
 				FFC46040216B6C0D0052222C /* Extensions.swift in Sources */,
@@ -372,6 +379,7 @@
 				FF1204EC21772B2E00A593B4 /* User.swift in Sources */,
 				FFFA5D8D216CD62100E6B740 /* MainTabBarController.swift in Sources */,
 				FF2F5D2C216DE4EB00B54AA0 /* UserProfileHeader.swift in Sources */,
+				FFB96708217DFB9A005C94E4 /* CustomAnimationDismisser.swift in Sources */,
 				FFFA5D91216CD72D00E6B740 /* UserProfileController.swift in Sources */,
 				FFC4602D216B5D720052222C /* AppDelegate.swift in Sources */,
 				FFB96704217DE3B1005C94E4 /* PreviewPhotoContainerView.swift in Sources */,
