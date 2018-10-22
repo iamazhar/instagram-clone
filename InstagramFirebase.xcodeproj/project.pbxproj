@@ -24,6 +24,7 @@
 		FF48E463216E34780043BF88 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF48E462216E34780043BF88 /* LoginController.swift */; };
 		FF603BD22170A07500DA3D66 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603BD12170A07500DA3D66 /* PhotoSelectorHeader.swift */; };
 		FF603BD42170B11F00DA3D66 /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */; };
+		FFB96702217DBD62005C94E4 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96701217DBD62005C94E4 /* CameraController.swift */; };
 		FFC4602D216B5D720052222C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4602C216B5D720052222C /* AppDelegate.swift */; };
 		FFC4602F216B5D720052222C /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4602E216B5D720052222C /* SignUpController.swift */; };
 		FFC46032216B5D720052222C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC46030216B5D720052222C /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		FF48E462216E34780043BF88 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FF603BD12170A07500DA3D66 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
 		FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
+		FFB96701217DBD62005C94E4 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		FFC46029216B5D720052222C /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC4602C216B5D720052222C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC4602E216B5D720052222C /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		FFB96700217DBD51005C94E4 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				FFB96701217DBD62005C94E4 /* CameraController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		FFC46020216B5D720052222C = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 		FFC4602B216B5D720052222C /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				FFB96700217DBD51005C94E4 /* Camera */,
 				FF1204EF2177504F00A593B4 /* Search */,
 				FF13A93F2174A4140057F113 /* Home */,
 				FF13A938217488E30057F113 /* Models */,
@@ -353,6 +364,7 @@
 				FF13A93A217488F10057F113 /* Post.swift in Sources */,
 				FF1204F12177505E00A593B4 /* UserSearchController.swift in Sources */,
 				FFC46040216B6C0D0052222C /* Extensions.swift in Sources */,
+				FFB96702217DBD62005C94E4 /* CameraController.swift in Sources */,
 				FF13A93C21748ABD0057F113 /* UserProfilePhotoCell.swift in Sources */,
 				FF1204EC21772B2E00A593B4 /* User.swift in Sources */,
 				FFFA5D8D216CD62100E6B740 /* MainTabBarController.swift in Sources */,
