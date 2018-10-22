@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class CommentsController: UICollectionViewController {
+    
+    var post: Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .red
@@ -26,14 +30,12 @@ class CommentsController: UICollectionViewController {
         tabBarController?.tabBar.isHidden = false
     }
     
-    var containerView: UIView = {
+    lazy var containerView: UIView = {
         let containerView = UIView()
         containerView.backgroundColor = .white
         containerView.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
         
-        let textField = UITextField()
-        textField.placeholder = "Enter Comment"
-        containerView.addSubview(textField)
+        containerView.addSubview(self.commentTextField)
         
         let submitButton = UIButton(type: .system)
         submitButton.setTitle("Submit", for: .normal)
@@ -42,15 +44,37 @@ class CommentsController: UICollectionViewController {
         submitButton.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
         containerView.addSubview(submitButton)
         
-        textField.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: submitButton.leftAnchor, paddingTop: 0, paddingLeft: 12, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        self.commentTextField.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: submitButton.leftAnchor, paddingTop: 0, paddingLeft: 12, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         submitButton.anchor(top: containerView.topAnchor, left: nil, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 12, width: 50, height: 0)
         
         return containerView
     }()
     
+    let commentTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter Comment"
+        return textField
+    }()
+    
     @objc func handleSubmit() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        print("Inserting comment:", self.commentTextField.text ?? "")
         
+        guard let postId = post?.id else { return }
+        let ref = Database.database().reference().child("comments").child(postId)
+        
+        let values = ["text" : commentTextField.text ?? "",
+                      "creationDate" : Date().timeIntervalSince1970,
+                      "uid" : uid] as [String : Any]
+        
+        ref.childByAutoId().updateChildValues(values) { (err, ref) in
+            if let err = err {
+                print("Failed to insert comment:", err.localizedDescription)
+                return
+            }
+            print("Successfully inserted comment")
+        }
     }
     
     override var inputAccessoryView: UIView? {
