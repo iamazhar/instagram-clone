@@ -24,6 +24,8 @@
 		FF48E463216E34780043BF88 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF48E462216E34780043BF88 /* LoginController.swift */; };
 		FF603BD22170A07500DA3D66 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603BD12170A07500DA3D66 /* PhotoSelectorHeader.swift */; };
 		FF603BD42170B11F00DA3D66 /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */; };
+		FF840B09217F1C9E00EFC3D9 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF840B08217F1C9E00EFC3D9 /* CommentCell.swift */; };
+		FF840B0B217F218B00EFC3D9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF840B0A217F218B00EFC3D9 /* Comment.swift */; };
 		FFB96702217DBD62005C94E4 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96701217DBD62005C94E4 /* CameraController.swift */; };
 		FFB96704217DE3B1005C94E4 /* PreviewPhotoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96703217DE3B1005C94E4 /* PreviewPhotoContainerView.swift */; };
 		FFB96706217DF7B1005C94E4 /* CustomAnimationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB96705217DF7B1005C94E4 /* CustomAnimationPresenter.swift */; };
@@ -59,6 +61,8 @@
 		FF48E462216E34780043BF88 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FF603BD12170A07500DA3D66 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
 		FF603BD32170B11F00DA3D66 /* SharePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
+		FF840B08217F1C9E00EFC3D9 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		FF840B0A217F218B00EFC3D9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FFB96701217DBD62005C94E4 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		FFB96703217DE3B1005C94E4 /* PreviewPhotoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPhotoContainerView.swift; sourceTree = "<group>"; };
 		FFB96705217DF7B1005C94E4 /* CustomAnimationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationPresenter.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			children = (
 				FF13A939217488F10057F113 /* Post.swift */,
 				FF1204EB21772B2E00A593B4 /* User.swift */,
+				FF840B0A217F218B00EFC3D9 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				FF13A9402174A4320057F113 /* HomeController.swift */,
 				FF13A9422174A51E0057F113 /* HomePostCell.swift */,
 				FFB96709217E3AA1005C94E4 /* CommentsController.swift */,
+				FF840B08217F1C9E00EFC3D9 /* CommentCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				FFB96702217DBD62005C94E4 /* CameraController.swift in Sources */,
 				FF13A93C21748ABD0057F113 /* UserProfilePhotoCell.swift in Sources */,
 				FF1204EC21772B2E00A593B4 /* User.swift in Sources */,
+				FF840B09217F1C9E00EFC3D9 /* CommentCell.swift in Sources */,
 				FFFA5D8D216CD62100E6B740 /* MainTabBarController.swift in Sources */,
 				FF2F5D2C216DE4EB00B54AA0 /* UserProfileHeader.swift in Sources */,
 				FFB96708217DFB9A005C94E4 /* CustomAnimationDismisser.swift in Sources */,
@@ -391,6 +398,7 @@
 				FF603BD22170A07500DA3D66 /* PhotoSelectorHeader.swift in Sources */,
 				FFB9670A217E3AA1005C94E4 /* CommentsController.swift in Sources */,
 				FF2E5C81216FB41C00AA8EC4 /* PhotoSelectorController.swift in Sources */,
+				FF840B0B217F218B00EFC3D9 /* Comment.swift in Sources */,
 				FF13A9412174A4320057F113 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
