@@ -19,8 +19,8 @@ class UserSearchCell: UICollectionViewCell {
         }
     }
     
-    let profileImageView: CustomeImageView = {
-        let iv = CustomeImageView()
+    let profileImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv

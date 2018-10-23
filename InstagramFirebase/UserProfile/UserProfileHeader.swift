@@ -85,8 +85,8 @@ class UserProfileHeader: UICollectionViewCell {
         editProfileFollowButton.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
     }
     
-    let profileImageView: CustomeImageView = {
-        let iv = CustomeImageView()
+    let profileImageView: CustomImageView = {
+        let iv = CustomImageView()
         return iv
     }()
     
