@@ -10,7 +10,7 @@ import UIKit
 
 var imageCache = [String: UIImage]()
 
-class CustomeImageView: UIImageView {
+class CustomImageView: UIImageView {
     
     var lastURLUsedToLoadImage: String?
     

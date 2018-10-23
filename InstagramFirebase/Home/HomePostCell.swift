@@ -46,8 +46,8 @@ class HomePostCell: UICollectionViewCell {
         captionLabel.attributedText = attributedText
     }
     
-    let userProfileImageView: CustomeImageView = {
-        let iv = CustomeImageView()
+    let userProfileImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.layer.cornerRadius = 20
@@ -68,8 +68,8 @@ class HomePostCell: UICollectionViewCell {
         return button
     }()
     
-    let photoImageView: CustomeImageView = {
-        let iv = CustomeImageView()
+    let photoImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
