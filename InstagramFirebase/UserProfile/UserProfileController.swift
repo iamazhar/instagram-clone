@@ -50,9 +50,9 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         ref.queryOrdered(byChild: "creationDate").observe(.childAdded, with: { (snapshot) in
             guard let dictionary = snapshot.value as? [String: Any] else { return }
             
-            let dummyUser = User(uid: uid, dictionary: ["username" : "azhar"])
+            guard let user = self.user else { return }
             
-            let post = Post(user: dummyUser, dictionary: dictionary)
+            let post = Post(user: user, dictionary: dictionary)
             self.posts.insert(post, at: 0)
         
             self.collectionView.reloadData()
