@@ -135,9 +135,11 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIImag
                     print("Successfully uploaded profileimage with URL:", profileImageUrl)
                     
                     guard let uid = user?.user.uid else{return}
+                    guard let fcmToken = Messaging.messaging().fcmToken else { return }
                     
                     let dictionaryValues = ["username": username,
-                                            "profileImageUrl": profileImageUrl]
+                                            "profileImageUrl": profileImageUrl,
+                                            "fcmToken": fcmToken]
                     let values = [uid: dictionaryValues]
                     
                     Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (err, ref) in
