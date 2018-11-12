@@ -40,6 +40,11 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         fetchUser()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData()
+    }
+    
     var isFinishedPaging = false
     var posts = [Post]()
     
