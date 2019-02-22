@@ -22,8 +22,11 @@ pod install
 
 ### Core Dependencies
 
-* SDWebImage - This library provides an async image downloader with cache support
-* JGProgressHUD - An elegant and simple progress HUD for iOS and tvOS.
+* Firebase/Core
+* Firebase/Auth
+* Firebase/Database
+* Firebase/Storage
+* Firebase/Messaging
 
 ## Project structure:
 
