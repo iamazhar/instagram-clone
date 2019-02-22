@@ -3,7 +3,7 @@ With a Firebase backend; All UI created programmatically; Great reference for in
 
 Supports: iOS 10.x and above
 
-![Screen](5cc37afa-43d3-4364-b09f-7031976c2b08.png)
+![Screenshot](5cc37afa-43d3-4364-b09f-7031976c2b08.png)
 
 ## Branches:
 
