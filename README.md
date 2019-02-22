@@ -1,5 +1,6 @@
 # Instagram-Clone
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
 With a Firebase backend; All UI created programmatically; Great reference for intermediate and beginner devs who want to create a real-world application fully programmatically.
 
 Supports: iOS 10.x and above
